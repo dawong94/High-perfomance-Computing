@@ -1,0 +1,30 @@
+building lib/libhomework4.so...
+mpicc -Iinclude -c -Wall -fPIC src/heat.c -o src/heat.o
+mpicc -Iinclude -shared src/heat.o -o lib/libhomework4.so
+build succeeded
+running tests...
+plot_example_serial_and_parallel()plot_example_serial_and_parallel()
+plot_example_serial_and_parallel()
+
+test_heat_parallel (__main__.TestHeat)test_heat_parallel (__main__.TestHeat) ... executed by Process 2
+ ... executed by Process 1
+plot_example_serial_and_parallel() --- saving to parallel_heat.png ...
+test_heat_parallel (__main__.TestHeat) ... executed by Process 0
+okok
+ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.735s
+
+
+----------------------------------------------------------------------OK
+
+Ran 1 test in 0.001s
+
+OK
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.735s
+
+OK

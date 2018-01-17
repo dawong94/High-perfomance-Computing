@@ -1,0 +1,25 @@
+test_simps_parallel_even (__main__.TestIntegrateSimps) ... ok
+test_simps_parallel_odd (__main__.TestIntegrateSimps) ... ok
+test_simps_parallel_single_interval (__main__.TestIntegrateSimps) ... ok
+test_simps_serial_even (__main__.TestIntegrateSimps) ... ok
+test_simps_serial_odd (__main__.TestIntegrateSimps) ... ok
+test_simps_serial_single_interval (__main__.TestIntegrateSimps) ... ok
+test_simps_chunked_parallel_even (__main__.TestIntegrateSimpsChunked) ... ok
+test_simps_chunked_parallel_odd (__main__.TestIntegrateSimpsChunked) ... ok
+test_simps_parallel_chunked_single_interval (__main__.TestIntegrateSimpsChunked) ... ok
+test_trapz_parallel (__main__.TestIntegrateTrapz) ... ok
+test_trapz_parallel_single_interval (__main__.TestIntegrateTrapz) ... ok
+test_trapz_serial (__main__.TestIntegrateTrapz) ... ok
+test_trapz_single_interval (__main__.TestIntegrateTrapz) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.003s
+
+OK
+
+===== Running Timings =====
+threads = 1, time = 0.031210
+threads = 2, time = 0.015979
+threads = 4, time = 0.009337
+
+===== Running Tests =====

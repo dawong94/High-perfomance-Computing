@@ -1,0 +1,38 @@
+test_collatz (test_homework1_90479047.TestExercise1) ... ERROR
+test_collatz_step (test_homework1_90479047.TestExercise1) ... ok
+test_collatz_step_error (test_homework1_90479047.TestExercise1) ... ok
+test_collatz_step_one (test_homework1_90479047.TestExercise1) ... ok
+test_gradient_descent (test_homework1_90479047.TestExercise2) ... ok
+test_gradient_descent_nearmin_smallsig (test_homework1_90479047.TestExercise2) ... ok
+test_gradient_descent_robust (test_homework1_90479047.TestExercise2) ... FAIL
+test_gradient_step (test_homework1_90479047.TestExercise2) ... ok
+test_sigma_condition (test_homework1_90479047.TestExercise2) ... ok
+test_decompose (test_homework1_90479047.TestExercise3) ... ok
+test_gauss_seidel_iteration (test_homework1_90479047.TestExercise3) ... ok
+test_gauss_seidel_step (test_homework1_90479047.TestExercise3) ... ok
+test_isSDD (test_homework1_90479047.TestExercise3) ... ok
+test_jacobi_iteration (test_homework1_90479047.TestExercise3) ... ok
+test_jacobi_step (test_homework1_90479047.TestExercise3) ... ok
+
+======================================================================
+ERROR: test_collatz (test_homework1_90479047.TestExercise1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/santos/Documents/homework1/wang19/homework1/test_homework1_90479047.py", line 59, in test_collatz
+    self.assertEqual(collatz(6), s6)
+  File "/home/santos/Documents/homework1/wang19/homework1/homework1/exercise1.py", line 48, in collatz
+    c=[k]
+UnboundLocalError: local variable 'k' referenced before assignment
+
+======================================================================
+FAIL: test_gradient_descent_robust (test_homework1_90479047.TestExercise2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/santos/Documents/homework1/wang19/homework1/test_homework1_90479047.py", line 118, in test_gradient_descent_robust
+    self.assertTrue(round(xf-xf_actual1,7)==0 or round(xf-xf_actual2,7)==0)
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.002s
+
+FAILED (failures=1, errors=1)

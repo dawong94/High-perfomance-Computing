@@ -1,0 +1,165 @@
+building lib/libhomework2.so...
+gcc -Iinclude -c -Wall -fPIC src/linalg.c -o src/linalg.o
+gcc -Iinclude -c -Wall -fPIC src/solvers.c -o src/solvers.o
+gcc -lm --shared src/linalg.o src/solvers.o -o lib/libhomework2.so
+build succeeded
+running test case TestLinalg.test_vec_add...
+test_vec_add (test_homework2_solution.TestLinalg) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+OK
+running test case TestLinalg.test_vec_sub...
+test_vec_sub (test_homework2_solution.TestLinalg) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+OK
+running test case TestLinalg.test_vec_norm...
+test_vec_norm (test_homework2_solution.TestLinalg) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+OK
+running test case TestLinalg.test_mat_add...
+test_mat_add (test_homework2_solution.TestLinalg) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+OK
+running test case TestLinalg.test_mat_vec...
+test_mat_vec (test_homework2_solution.TestLinalg) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+OK
+running test case TestLinalg.test_mat_mat...
+test_mat_mat (test_homework2_solution.TestLinalg) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+OK
+running test case TestSolver.test_solve_lower_triangular_diagonal...
+test_solve_lower_triangular_diagonal (test_homework2_solution.TestSolver) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.007s
+
+OK
+running test case TestSolver.test_solve_lower_triangular...
+test_solve_lower_triangular (test_homework2_solution.TestSolver) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.008s
+
+OK
+running test case TestSolver.test_solve_upper_triangular_diagonal...
+test_solve_upper_triangular_diagonal (test_homework2_solution.TestSolver) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.007s
+
+OK
+running test case TestSolver.test_solve_upper_triangular...
+test_solve_upper_triangular (test_homework2_solution.TestSolver) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.007s
+
+OK
+running test case TestSolver.test_jacobi...
+test_jacobi (test_homework2_solution.TestSolver) ... FAIL
+
+======================================================================
+FAIL: test_jacobi (test_homework2_solution.TestSolver)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_homework2_solution.py", line 149, in test_jacobi
+    self.assertLess(error, 1e-4)
+AssertionError: nan not less than 0.0001
+
+----------------------------------------------------------------------
+Ran 1 test in 0.008s
+
+FAILED (failures=1)
+running test case TestSolver.test_jacobi_epsilon...
+test_jacobi_epsilon (test_homework2_solution.TestSolver) ... FAIL
+
+======================================================================
+FAIL: test_jacobi_epsilon (test_homework2_solution.TestSolver)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_homework2_solution.py", line 159, in test_jacobi_epsilon
+    self.assertLess(error, 1e-8)
+AssertionError: nan not less than 1e-08
+
+----------------------------------------------------------------------
+Ran 1 test in 0.008s
+
+FAILED (failures=1)
+running test case TestSolver.test_gauss_seidel...
+test_gauss_seidel (test_homework2_solution.TestSolver) ... FAIL
+
+======================================================================
+FAIL: test_gauss_seidel (test_homework2_solution.TestSolver)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_homework2_solution.py", line 168, in test_gauss_seidel
+    self.assertLess(error, 1e-4)
+AssertionError: nan not less than 0.0001
+
+----------------------------------------------------------------------
+Ran 1 test in 0.008s
+
+FAILED (failures=1)
+running test case TestSolver.test_gauss_seidel_epsilon...
+test_gauss_seidel_epsilon (test_homework2_solution.TestSolver) ... FAIL
+
+======================================================================
+FAIL: test_gauss_seidel_epsilon (test_homework2_solution.TestSolver)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_homework2_solution.py", line 178, in test_gauss_seidel_epsilon
+    self.assertLess(error, 1e-8)
+AssertionError: nan not less than 1e-08
+
+----------------------------------------------------------------------
+Ran 1 test in 0.008s
+
+FAILED (failures=1)
+running test case TestSolver.test_jacobi_iteration_count...
+test_jacobi_iteration_count (test_homework2_solution.TestSolver) ... FAIL
+
+======================================================================
+FAIL: test_jacobi_iteration_count (test_homework2_solution.TestSolver)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_homework2_solution.py", line 191, in test_jacobi_iteration_count
+    self.assertTrue(55 < num_iterations < 75)
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+FAILED (failures=1)
+running test case TestSolver.test_gauss_seidel_iteration_count...
+test_gauss_seidel_iteration_count (test_homework2_solution.TestSolver) ... FAIL
+
+======================================================================
+FAIL: test_gauss_seidel_iteration_count (test_homework2_solution.TestSolver)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_homework2_solution.py", line 199, in test_gauss_seidel_iteration_count
+    self.assertTrue(25 < num_iterations < 45)
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+FAILED (failures=1)

@@ -1,0 +1,5 @@
+
+===== Running Timings =====
+error from untimed run:  1.04716235683e-12
+times:  [ 0.22205775  0.21326664  0.21698494  0.22376591  0.21516113]
+minimum time is:  0.213266643
